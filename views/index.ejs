@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>
+            GTVisualizer
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="/manager.js"></script>
+        <script src="/router.js"></script>
+        <script src = <%= algoPath %> ></script>
+    </head>
+
+    <body>
+        <div class = "navbar">
+            <button id = "editorButton"> Editor </button>
+            <button id = "dijkstraButton"> Dijkstra's </button>
+            <button id = "dfsButton"> DFS </button>
+            <button id = "bfsButton"> BFS </button>
+        </div>
+
+        <div class = "flex-container">
+            <div style = "width: 20%; padding: 50px;">
+                <% if (algoPath != "no path") { %>
+                
+                <% } %>
+                <label style ="color: #EDEFEC; display: block">
+                    Graph Size: <br>
+                </label>
+                <textarea id = "graph-size" name = "graph-size" rows = "1" cols = "25"></textarea>
+                <label style ="color: #EDEFEC; display: block">
+                    Edges:
+                </label>
+                <textarea id = "graph-edges" name = "graph-edges" rows = "13" cols = "25"></textarea>
+                <label style ="color: #EDEFEC; display: block">
+                    Output:
+                </label>
+                <textarea id = "output" name = "output" rows = "12" cols = "25" readonly></textarea>
+            </div>
+
+            <div class = "displayBox">
+                <% if (algoPath != "/home/home.js") { %>
+                <%- include('partials/buttons.ejs') %>
+                <% } %>
+
+                <div id = "graphDisplay">
+
+                    <svg width="780px" height="450px" xmlns="http://www.w3.org/2000/svg">
+                        <g id = "nodes" stroke = "black" fill ="white" stroke-width="5px" >
+
+                        </g>
+                        <g id = "edges" stroke = "black" stroke-width = "5px">
+                            
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

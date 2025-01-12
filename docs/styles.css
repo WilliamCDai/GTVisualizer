@@ -1,0 +1,80 @@
+body {
+    background-color: #104154;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #051e39;
+    height: 60px;
+}
+
+.navbar button{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    border: none;
+    height: 100%;
+    float:left;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    background-color: #051e39;
+    color: #EDEFEC;
+}
+
+.navbar button:hover{
+    background-color: #E0DAC6;
+    color: #051e39;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+#graph-edges, #graph-size, #output{
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: black; 
+    font-family: 'Courier New', Courier, monospace;
+    color: #EDEFEC;
+    font-size: medium;
+}
+
+.displayBox {
+    width: 70%;
+    padding: 65px 35px;
+}
+
+#graphDisplay{
+    position: absolute;
+    height: 450px;
+    width: 780px;
+    border: 2px solid #051e39;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+}
+
+/*.node {
+    position: absolute;
+    z-index: 10;
+    cursor: move;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #051e39;
+    text-align: center;
+    padding: 14px 0px;
+}*/
+
+
+
